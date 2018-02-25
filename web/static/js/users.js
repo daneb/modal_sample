@@ -12,13 +12,13 @@ export default class Users {
 
     return fetch(url, {
       body: JSON.stringify(data),
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *omit
+      cache: 'no-cache',
+      credentials: 'same-origin',
       headers: {
         'user-agent': 'Mozilla/4.0 MDN Example',
         'content-type': 'application/json'
       },
-      method: 'POST', // *GET, PUT, DELETE, etc.
+      method: 'POST',
       mode: 'cors', // no-cors, *same-origin
       redirect: 'follow', // *manual, error
       referrer: 'no-referrer', // *client
