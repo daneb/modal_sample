@@ -1,5 +1,16 @@
 # ModalSample
 
+The Modal Sample details how a bootstrap modal can take input and fire an event
+to a listener with the data and an element it can manipulate on success or failure.
+The basic mechanism is Event Emitters.
+
+The driving principals in design:
+1. Use whats native and readily available
+2. Simplicity and readability
+3. To not be tightly coupled to an element
+4. To not mix presentation with behaviour (bloat the Eex Templates with JS)
+5. Create good organization of JS within a Phoenix project
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
