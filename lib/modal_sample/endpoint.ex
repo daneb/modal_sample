@@ -38,5 +38,6 @@ defmodule ModalSample.Endpoint do
     key: "_modal_sample_key",
     signing_salt: "TwJlZbOR"
 
+  plug CORSPlug
   plug ModalSample.Router
 end

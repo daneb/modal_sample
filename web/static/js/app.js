@@ -19,4 +19,11 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import users from "./users"
+import Users from "./users"
+
+function addUser(event) {
+    const user = new Users();
+    user.add(event.detail);
+}
+
+document.addEventListener('addUser', addUser, false);

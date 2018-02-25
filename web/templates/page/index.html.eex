@@ -22,14 +22,23 @@
           </div>
           <div class="modal-body">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              <input type="text" id="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="addUser()" >Submit</button>
           </div>
         </div>
       </div>
     </div>
 </div>
+
+<script>
+  const addUser = () => {
+    let modal = document.getElementById('exampleModalCenter');
+    let name = document.getElementById('username').value;
+    let userEvent = new CustomEvent("addUser", { detail: { data: 'Dane', element: modal }});
+    document.dispatchEvent(userEvent);
+  }
+</script>

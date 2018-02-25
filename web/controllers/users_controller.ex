@@ -9,6 +9,8 @@ defmodule ModalSample.UsersController do
   end
 
   def create(conn, %{"users" => users_params}) do
+    IO.inspect("Helllo");
+    IO.inspect(users_params);
     changeset = Users.changeset(%Users{}, users_params)
 
     case Repo.insert(changeset) do
