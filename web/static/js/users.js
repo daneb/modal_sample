@@ -2,8 +2,8 @@ export default class Users {
   constructor() {  }
 
   add(detail) {
-    debugger
     const url = "api/users"
+    var el = detail.element; // the Element to update
     const data = {
       "users": {
         "name": detail.data
@@ -24,13 +24,13 @@ export default class Users {
       referrer: 'no-referrer', // *client
     })
     .then((response) => {
-      var el = detail["data"];
-      el.insertAdjacentHTML('<div class="alert alert-danger"><strong>Danger!</strong> Indicates a dangerous or potentially negative action.</div>');
-      const result = response.json();
-      alert(result);
+      return response.json();
+    })
+    .then(({data: {name, id}}) => {
+      el.innerHTML = `<div class='alert alert-success'><strong>Success!</strong> Added user ${name} with id: ${id}</div>`;
     })
     .catch(err => {
-      console.error(err);
+      el.innerHTML = '<div class="alert alert-danger"><strong>Failed!</strong> Unable to add user.</div>';
     });
   }
 
