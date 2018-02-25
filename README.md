@@ -11,6 +11,11 @@ The driving principals in design:
 4. To not mix presentation with behaviour (bloat the Eex Templates with JS)
 5. Create good organization of JS within a Phoenix project
 
+Areas of Interest:
+1. Index.html.eex - contains the dispatch event
+2. app.js - contains the listener (without violating and polluting the global namespace ("window))
+3. users.js - the actual AJAX call using native fetch and handle of success or failure
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
