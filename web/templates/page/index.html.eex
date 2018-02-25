@@ -38,7 +38,7 @@
   const addUser = () => {
     let modal = document.getElementById('modalBody');
     let name = document.getElementById('username').value;
-    let userEvent = new CustomEvent("addUser", { detail: { data: 'Dane', element: modal }});
+    let userEvent = new CustomEvent("addUser", { detail: { data: name, element: modal }});
     document.dispatchEvent(userEvent);
   }
 </script>
