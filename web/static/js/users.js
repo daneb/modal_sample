@@ -27,10 +27,10 @@ export default class Users {
       return response.json();
     })
     .then(({data: {name, id}}) => {
-      el.innerHTML = `<div class='alert alert-success'><strong>Success!</strong> Added user ${name} with id: ${id}</div>`;
+      el.innerHTML = el.innerHTML + `<div class='alert alert-success'><strong>Success!</strong> Added user ${name} with id: ${id}</div>`;
     })
     .catch(err => {
-      el.innerHTML = '<div class="alert alert-danger"><strong>Failed!</strong> Unable to add user.</div>';
+      el.innerHTML = el.innerHTML + '<div class="alert alert-danger"><strong>Failed!</strong> Unable to add user.</div>';
     });
   }
 
